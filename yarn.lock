@@ -1310,6 +1310,17 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
+"@material-ui/lab@^4.0.0-alpha.52":
+  version "4.0.0-alpha.52"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.52.tgz#a868d8c772a90db091a6bfc89aed21a0e2c486bf"
+  integrity sha512-aDoRWA+q3/T2spvvQrxPz8qjtf9l8NhaG9ZISBy9zD3cJ05s3KfEP2nrsoBOBgonlSMFQQzUTnxAwThwsJfllw==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/utils" "^4.9.6"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.0"
+
 "@material-ui/react-transition-group@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@material-ui/react-transition-group/-/react-transition-group-4.3.0.tgz#92529142addb5cc179dbf42d246c7e3fe4d6104b"
@@ -12945,6 +12956,16 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typeface-chivo@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-chivo/-/typeface-chivo-0.0.72.tgz#e269d314ed28ee496203e1b513a955b343878543"
+  integrity sha512-Y11qsKtkyqizJGas5ShkQUOZHBT3v8HnqZDfX//nIc/9k4Ep9rPe+YyrOP3n7Sv1kWyMk+BTHaTWO0j9C60G1Q==
+
+typeface-overpass@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-overpass/-/typeface-overpass-0.0.72.tgz#d1f92deeacd6745cedcc0478923b6b0c7360c897"
+  integrity sha512-WEFhNZFDdJirSgCJQAuuCGPGSRXKiSM/HGLnA4bXYvE5tELXGrKph1v4NuSDQcsUJKvN8t8iZZmclkd069gPVA==
 
 unbzip2-stream@^1.0.9:
   version "1.4.2"

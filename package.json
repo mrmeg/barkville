@@ -1,13 +1,15 @@
 {
   "name": "Barkville",
   "private": true,
-  "description": "The best dog trainers in NYC!",
+  "description": "",
   "version": "0.1.0",
   "author": "Matthew Megenhardt <mrmegenhardt@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.52",
     "@material-ui/styles": "^4.9.0",
+    "axios": "^0.19.2",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -21,7 +23,9 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-swipeable-views": "^0.13.8",
-    "react-swipeable-views-utils": "^0.13.7"
+    "react-swipeable-views-utils": "^0.13.7",
+    "typeface-chivo": "^0.0.72",
+    "typeface-overpass": "^0.0.72"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
