@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/barkville',
   siteMetadata: {
     title: 'NYC Dog Training',
     description: 'Personalized dog training for the Upper East Side',
