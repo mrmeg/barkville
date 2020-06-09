@@ -6,6 +6,7 @@ module.exports = {
     author: 'Matt Megenhardt <mrmegenhardt@gmail.com>',
   },
   plugins: [
+    'gatsby-plugin-material-ui',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

@@ -2296,6 +2296,19 @@ auto-bind@^4.0.0:
   resolved "https://registry.yarnpkg.com/auto-bind/-/auto-bind-4.0.0.tgz#e3589fc6c2da8f7ca43ba9f84fa52a744fc997fb"
   integrity sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==
 
+autoprefixer@^9.6.1:
+  version "9.8.0"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.0.tgz#68e2d2bef7ba4c3a65436f662d0a56a741e56511"
+  integrity sha512-D96ZiIHXbDmU02dBaemyAg53ez+6F5yZmapmgKcjm35yEe1uVDYI8hGW3VYoGRaG290ZFf91YxHrR518vC0u/A==
+  dependencies:
+    browserslist "^4.12.0"
+    caniuse-lite "^1.0.30001061"
+    chalk "^2.4.2"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^7.0.30"
+    postcss-value-parser "^4.1.0"
+
 autoprefixer@^9.7.6:
   version "9.7.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.6.tgz#63ac5bbc0ce7934e6997207d5bb00d68fa8293a4"
@@ -3076,6 +3089,11 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30001039, can
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001048.tgz#4bb4f1bc2eb304e5e1154da80b93dee3f1cf447e"
   integrity sha512-g1iSHKVxornw0K8LG9LLdf+Fxnv7T1Z+mMsf0/YYLclQX4Cd522Ap0Lrw6NFqHgezit78dtyWxzlV2Xfc7vgRg==
 
+caniuse-lite@^1.0.30001061:
+  version "1.0.30001079"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001079.tgz#ed3e5225cd9a6850984fdd88bf24ce45d69b9c22"
+  integrity sha512-2KaYheg0iOY+CMmDuAB3DHehrXhhb4OZU4KBVGDr/YKyYAcpudaiUQ9PJ9rxrPlKEoJ3ATasQ5AN48MqpwS43Q==
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -3244,6 +3262,13 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+clean-css@^4.2.1:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
+  integrity sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA==
+  dependencies:
+    source-map "~0.6.0"
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -5884,6 +5909,15 @@ gatsby-plugin-manifest@^2.2.39:
     gatsby-core-utils "^1.2.0"
     semver "^5.7.1"
     sharp "^0.25.1"
+
+gatsby-plugin-material-ui@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-material-ui/-/gatsby-plugin-material-ui-2.1.9.tgz#f0e4366f99475ba4ca4c7a6c6026c7546e25170e"
+  integrity sha512-bvfAEOugCyDgVY9ZNadnC+RP20qA/G2mMDnoj25hRf98fcTtP128s1DshoeYZF61w46Mqp6ACB+uZtrG6iWDfQ==
+  dependencies:
+    autoprefixer "^9.6.1"
+    clean-css "^4.2.1"
+    postcss "^7.0.17"
 
 gatsby-plugin-offline@^3.0.32:
   version "3.2.0"
@@ -10475,7 +10509,7 @@ postcss-value-parser@^3.0.0, postcss-value-parser@^3.3.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
-postcss-value-parser@^4.0.2, postcss-value-parser@^4.0.3:
+postcss-value-parser@^4.0.2, postcss-value-parser@^4.0.3, postcss-value-parser@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
@@ -10493,6 +10527,15 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.26, postcss@^7.0.27:
   version "7.0.27"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.27.tgz#cc67cdc6b0daa375105b7c424a85567345fc54d9"
   integrity sha512-WuQETPMcW9Uf1/22HWUWP9lgsIC+KEHg2kozMflKjbeUtw9ujvFX6QmIfozaErDkmLWS9WEnEdEe6Uo9/BNTdQ==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.17, postcss@^7.0.30:
+  version "7.0.32"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
+  integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -12104,7 +12147,7 @@ source-map@^0.5.0, source-map@^0.5.6:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
 
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
+source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
