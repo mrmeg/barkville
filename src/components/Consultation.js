@@ -26,7 +26,7 @@ const Consultation = () => {
       dogProbs,
     };
 
-    const url = 'http://192.168.1.158:5000/api/consult';
+    const url = 'https://barkville-server.herokuapp.com/api/consult';
 
     try {
       const res = await axios.post(url, {...data});
