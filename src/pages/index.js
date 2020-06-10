@@ -8,6 +8,7 @@ import Testimonials from '../components/Testimonials';
 import Services from '../components/Services';
 import Consultation from '../components/Consultation';
 import Philosophy from '../components/Philosophy';
+import Footer from '../components/Footer';
 import './index.css';
 
 require('typeface-chivo');
@@ -52,6 +53,7 @@ const IndexPage = () => {
       <Testimonials />
       <Divider className={classes.divider} variant='middle' />
       <Consultation />
+      <Footer />
     </MuiThemeProvider>
   );
 };
