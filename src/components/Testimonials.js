@@ -31,7 +31,7 @@ const items = [
   },
 ];
 
-const Slider = () => {
+const Testimonials = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
@@ -99,7 +99,7 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Testimonials;
 
 const useStyles = makeStyles(() => ({
   buttonsContainer: {

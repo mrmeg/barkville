@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import json2mq from 'json2mq';
 import Container from '@material-ui/core/Container';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -19,6 +21,7 @@ const panelDetails = [
     title: 'UES Dog Walking',
     description: 'Think of a dog’s walk with Barkville like an hour of camp! We offer an hour of a structured group walk to the park, followed by a water break, mixed with some supervised and structured engagement so dogs can bond with respectful boundaries.',
     price: 'Solo walks: $25/30 minutes | $40/hour',
+    alt: 'Three dogs sitting obediently on the sidewalk',
   },
   {
     key: 2,
@@ -28,6 +31,7 @@ const panelDetails = [
     description2: 'First session begins with a consultation, behavior assessment, followed by a training regiment. Our dog walking, off leash services, and agility program, are all follow up programs that solidify our training regiment and philosophy.',
     description3: '',
     price: '',
+    alt: 'A small dog with a training vest sitting',
   },
   {
     key: 3,
@@ -36,11 +40,17 @@ const panelDetails = [
     description: 'This service is best for when you are going away and for dogs that thrive best in an environment they’re already familiar with! This overnight is done with only trainers who provide around the clock care.',
     description2: 'Overnight care also comes with excursions to different places in the city and time with other well balanced dogs. For an additional charge, we also offer a  weight loss/ training program for dogs that need more structure or who may need to lose some weight.',
     price: '',
+    alt: 'Trainer walking a Beagle and Great Dane',
   },
 ];
 
 const Services = () => {
   const classes = useStyles();
+  const matches = useMediaQuery(
+    json2mq({
+      maxWidth: 500,
+    }),
+  );
   const data = useStaticQuery(graphql`
     query {
       enrichment: file(relativePath: { eq: "enrichment.jpg" }) {
@@ -87,8 +97,8 @@ const Services = () => {
           >
             <Typography className={classes.heading} variant='body1'>{item.title}</Typography>
           </ExpansionPanelSummary>
-          <div className={classes.panelDetails}>
-            <img className={classes.panelImage} src={item.image} alt='A cute Beagle puppy' />
+          <div className={matches ? classes.panelDetailsColumn : classes.panelDetails}>
+            <img className={classes.panelImage} src={item.image} alt={item.alt} />
             <Typography variant='body2'>{item.description}</Typography>
             {item.description2 !== '' ? <Typography style={{paddingTop: '.75rem'}} variant='body2'>{item.description2}</Typography> : null}
             {item.description3 !== '' ? <Typography style={{paddingTop: '.75rem'}} variant='body2'>{item.description3}</Typography> : null}
@@ -128,11 +138,17 @@ const useStyles = makeStyles(() => ({
   panelDetails: {
     padding: '8px 16px 16px 8px',
   },
+  panelDetailsColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '8px 16px 16px 8px',
+
+  },
   panelImage: {
     float: 'left',
     height: 'auto',
     maxHeight: 'auto',
-    maxWidth: '100%',
+    maxWidth: 300,
     marginRight: '1rem',
     borderRadius: 5,
     overflow: 'contain',

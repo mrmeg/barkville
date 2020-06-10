@@ -4,7 +4,7 @@ import Divider from '@material-ui/core/Divider';
 import SEO from '../components/seo';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
-import Slider from '../components/Slider';
+import Testimonials from '../components/Testimonials';
 import Services from '../components/Services';
 import Consultation from '../components/Consultation';
 import Philosophy from '../components/Philosophy';
@@ -49,7 +49,7 @@ const IndexPage = () => {
       <Divider className={classes.divider} variant='middle' />
       <Services />
       <Divider className={classes.divider} variant='middle' />
-      <Slider />
+      <Testimonials />
       <Divider className={classes.divider} variant='middle' />
       <Consultation />
     </MuiThemeProvider>
