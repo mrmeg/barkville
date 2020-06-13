@@ -10,9 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
-import DogWalking from '../images/dog_walking.jpg';
-import DogTraining from '../images/dog_training.jpg';
-import Staycation from '../images/staycation.jpg';
+import DogWalking from '../images/dog_walking-min.jpg';
+import DogTraining from '../images/dog_training-min.jpg';
+import Staycation from '../images/staycation-min.jpg';
 
 const panelDetails = [
   {
@@ -53,7 +53,7 @@ const Services = () => {
   );
   const data = useStaticQuery(graphql`
     query {
-      enrichment: file(relativePath: { eq: "enrichment.jpg" }) {
+      enrichment: file(relativePath: { eq: "enrichment-min.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 417) {
             ...GatsbyImageSharpFluid

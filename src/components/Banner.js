@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      bannerImage: file(relativePath: { eq: "banner.jpg" }) {
+      bannerImage: file(relativePath: { eq: "banner-min.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1280, maxHeight: 860) {
             ...GatsbyImageSharpFluid

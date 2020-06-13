@@ -27,6 +27,7 @@ const Consultation = () => {
     };
 
     const url = 'https://barkville-server.herokuapp.com/api/consult';
+    // const url = 'http://localhost:5000/api/consult';
 
     try {
       const res = await axios.post(url, {...data});

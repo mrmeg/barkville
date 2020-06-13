@@ -7,6 +7,15 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-material-ui',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        path: `${__dirname}/src/svg`,
+        // rule: {
+        //   include: /assets/, // See below to configure properly
+        // },
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

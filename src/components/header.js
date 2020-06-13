@@ -14,6 +14,12 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+// SVG Icons
+import Walk from '../svg/we_walk.svg';
+import Run from '../svg/we_run.svg';
+import Play from '../svg/we_play.svg';
+import Train from '../svg/we_train.svg';
+import Love from '../svg/we_love.svg';
 
 const Header = () => {
   const classes = useStyles();
@@ -21,7 +27,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "logo_pet_services.png" }) {
+      logo: file(relativePath: { eq: "logo_pet_services-min.png" }) {
         childImageSharp {
           fixed(height: 150, width: 150) {
             ...GatsbyImageSharpFixed
@@ -44,9 +50,27 @@ const Header = () => {
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Img fixed={data.logo.childImageSharp.fixed} />
         </div>
-        <Typography style={{fontFamily: 'typeface-overpass', textAlign: 'center', marginLeft: 5, marginRight: 5, lineHeight: 1}} variant='subtitle1'>Dog walking, training, and overnight care for New York&apos;s Upper East Side.</Typography>
+        <div className={classes.weContainer}>
+          <Typography className={classes.weText} variant='subtitle1'>We Walk</Typography>
+          <Walk style={{height: '1.5rem', width: '1.5rem'}} />
+        </div>
+        <div className={classes.weContainer}>
+          <Typography className={classes.weText} variant='subtitle1'>We Run</Typography>
+          <Run style={{height: '1.5rem', width: '1.5rem'}} />
+        </div>
+        <div className={classes.weContainer}>
+          <Typography className={classes.weText} variant='subtitle1'>We Play</Typography>
+          <Play style={{height: '1.5rem', width: '1.5rem'}} />
+        </div>
+        <div className={classes.weContainer}>
+          <Typography className={classes.weText} variant='subtitle1'>We Train</Typography>
+          <Train style={{height: '1.5rem', width: '1.5rem'}} />
+        </div>
+        <div className={classes.weContainer}>
+          <Typography className={classes.weText} variant='subtitle1'>We Love</Typography>
+          <Love style={{height: '1.5rem', width: '1.5rem'}} />
+        </div>
         <Divider style={{marginTop: 10, marginBottom: 5}} variant='middle' />
-        <Typography className={classes.drawerHeader} variant='h6'>Contact Us</Typography>
         <List>
           <ListItem button key={0}>
             <ListItemIcon><Phone /></ListItemIcon>
@@ -127,5 +151,21 @@ const useStyles = makeStyles(() => ({
   phone: {
     marginRight: 10,
     fontFamily: 'typeface-chivo',
+  },
+  weContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingLeft: '25%',
+    marginBottom: 2.5,
+  },
+  weText: {
+    fontFamily: 'typeface-overpass',
+    textAlign: 'center',
+    marginLeft: 5,
+    marginRight: 5,
+    lineHeight: 1,
+    fontSize: '1.25rem',
   },
 }));
