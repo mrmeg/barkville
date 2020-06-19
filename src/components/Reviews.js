@@ -16,20 +16,20 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const items = [
   {
     key: 0,
-    preview: 'Honestly, I definitely was not prepared for the challenges of having a German Shepherd in NYC.  She is smart, sassy, and spunky — all the things you want in a GSD, however, it is a breed that needs special understanding and training, that I quickly realized I did not have.  Here is where Maya and Barkville came into our lives — to our rescue!...',
+    preview: 'Honestly, I definitely was not prepared for the challenges of having a German Shepherd in NYC.  She is smart, sassy, and spunky — all the things you want in a GSD, however,...',
     text: 'Honestly, I definitely was not prepared for the challenges of having a German Shepherd in NYC.  She is smart, sassy, and spunky — all the things you want in a GSD, however, it is a breed that needs special understanding and training, that I quickly realized I did not have.  Here is where Maya and Barkville came into our lives — to our rescue! \n\nWe have been part of the Barkville family since my sweet pup was only a couple of months old.  I have literally watched her transform from being extremely hyper and stubborn on a leash to much more respectful, and even walking with other dogs which is something I never thought possible! All of this comes from working with Barkville. \n\n As much as the training is for my pup, it is equally as much for me.  I can honestly say, they have the unique gift of training not only the animals, but the humans as well.  We do not leave our big girl with anyone besides Maya\'s team, whether it is for walks while we are at work, or for overnight sleepovers.  We trust them to take the best care of her, and they honestly treat my girl like their own.  Maya has become like family to us, and I KNOW it would not have been possible to have the dog I have now without them. Over the last few years, I have learned so much and continue to grow in our journey.  They truly help  make my dog and I be the best TEAM we can be!',
     image: freya,
     alt: 'A German Shepherd and her owner',
   },
   {
     key: 1,
-    preview: 'We recently moved to New York from Atlanta and met Maya and her dog, Lukey, at the dog park. My dog, Molly, immediately took to Maya at the park and would not leave her side. I had been looking for a dog walking and sitting service so I was very excited to learn that Maya recently opened a dog service business. We have been using her service for a week now and could not be happier!!',
+    preview: 'We recently moved to New York from Atlanta and met Maya and her dog, Lukey, at the dog park. My dog, Molly, immediately took to Maya at the park and would not leave her side...',
     text: 'We recently moved to New York from Atlanta and met Maya and her dog, Lukey, at the dog park. My dog, Molly, immediately took to Maya at the park and would not leave her side. I had been looking for a dog walking and sitting service so I was very excited to learn that Maya recently opened a dog service business. We have been using her service for a week now and could not be happier!! \n\nEvery day, Maya spends an hour with Molly at the dog park. Molly gets a little lazy at times so Maya even chases her around at the park to ensure she gets her exercise. She also sends me tons of pictures and videos of her after her walk. Molly is always so happy when Maya comes over and so sad when she leaves - seriously, she pouts by the door lol. \n\nIt is such a great feeling to know that Molly is well taken care of while I am away at work. I cannot thank Maya enough for keeping my girl happy!!',
     image: molly,
     alt: 'A German Shepherd at a dog run',
   }, {
     key: 2,
-    preview: 'I am so grateful to have had Maya come and care for my three sweet fur babies! I have two cats and a dog, and all three were loved and cared for both times I was gone. My cats are usually somewhat reserved around new people, and I loved getting pictures of them cuddling with Maya! My dog also seemed to warm up very quickly, and he was so happy whenever he was around her! I got so many pictures of him on walks, cuddling and playing! I truly appreciated the care that Maya gave to all three of my babies, and I look forward to any opportunity in the future for her to be with them again!',
+    preview: 'I am so grateful to have had Maya come and care for my three sweet fur babies! I have two cats and a dog, and all three were loved and cared for both times I was gone. My cats are usually somewhat reserved around new people...',
     text: 'I am so grateful to have had Maya come and care for my three sweet fur babies! I have two cats and a dog, and all three were loved and cared for both times I was gone. My cats are usually somewhat reserved around new people, and I loved getting pictures of them cuddling with Maya! My dog also seemed to warm up very quickly, and he was so happy whenever he was around her! I got so many pictures of him on walks, cuddling and playing! I truly appreciated the care that Maya gave to all three of my babies, and I look forward to any opportunity in the future for her to be with them again!',
     image: tide,
     alt: 'A Kelpie sitting with a Beagle',
@@ -53,6 +53,8 @@ const Reviews = () => {
 
   return (
     <Container maxWidth='md'>
+      <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Barkville Dogs</Typography>
+
       <Carousel autoPlay={false} showArrows={true} dynamicHeight={true}>
 
         <div key={items[0].key}>
