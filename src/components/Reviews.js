@@ -7,10 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import ReactModal from 'react-modal';
 // Assets and styles
 import CancelIcon from '@material-ui/icons/Cancel';
-import freya from '../images/freya.jpg';
-import molly from '../images/molly.jpg';
-import tide from '../images/tide.jpg';
-import gypsy from '../images/gypsy.jpg';
+import freya from '../images/freya-min.jpg';
+import molly from '../images/molly-min.jpg';
+import tide from '../images/tide-min.jpg';
+import gypsy from '../images/gypsy-min.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const items = [
