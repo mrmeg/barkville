@@ -4,11 +4,12 @@ import Divider from '@material-ui/core/Divider';
 import SEO from '../components/seo';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
 import Services from '../components/Services';
 import Consultation from '../components/Consultation';
 import Philosophy from '../components/Philosophy';
 import Footer from '../components/Footer';
+import Reviews from '../components/Reviews';
 import './index.css';
 
 require('typeface-chivo');
@@ -50,8 +51,10 @@ const IndexPage = () => {
       <Divider className={classes.divider} variant='middle' />
       <Services />
       <Divider className={classes.divider} variant='middle' />
-      <Testimonials />
+      <Reviews />
       <Divider className={classes.divider} variant='middle' />
+      {/* <Testimonials />
+      <Divider className={classes.divider} variant='middle' /> */}
       <Consultation />
       <Footer />
     </MuiThemeProvider>
