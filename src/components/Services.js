@@ -12,7 +12,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import DogWalking from '../images/dog_walking-min.jpg';
 import DogTraining from '../images/dog_training-min.jpg';
-import Staycation from '../images/staycation-min.jpg';
+import Staycation from '../images/staycation.jpg';
 
 const panelDetails = [
   {

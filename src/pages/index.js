@@ -25,7 +25,6 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      // main: '#36454f',
       main: '#c8e1cc',
     },
     secondary: {

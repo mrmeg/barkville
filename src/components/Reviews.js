@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import { Carousel } from 'react-responsive-carousel';
+import {Carousel} from 'react-responsive-carousel';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import ReactModal from 'react-modal';
@@ -11,6 +11,7 @@ import freya from '../images/freya-min.jpg';
 import molly from '../images/molly-min.jpg';
 import tide from '../images/tide-min.jpg';
 import gypsy from '../images/gypsy-min.jpg';
+import arev from '../images/arev.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const items = [
@@ -42,6 +43,19 @@ const items = [
     image: gypsy,
     alt: '',
   },
+  {
+    key: 4,
+    preview: 'Maya is wonderful.  Warm, compassionate, honest, trustworthy, experienced, dedicated, and truly understands the nature of each individual dog. I met Maya while she was training...',
+    text: `Maya is wonderful.  Warm, compassionate, honest, trustworthy, experienced, dedicated, and truly understands the nature of each individual dog.
+    I met Maya while she was training a stubborn single minded terrier surrounded by multiple dogs including some aggressive untrained dogs.  The dog she was training remained calm and submissive.  That is when I realized that Maya is an amazing dog trainer.
+    When I approached Maya to ask her if she would help me train my dog, her first comment was and I paraphrase: You know that training is about training me, the human.
+    Having had three other dogs, I knew Maya knows her business – dog training.  Having had three other dogs why did I still ask to work with Maya?  Because each dog is different.
+    Each dog is different and each dog has its own needs.  My dog is full of energy and has anxiety issues.  I gave Maya free reign of my apartment while she worked with my dog and I waited in the lobby.  When I came back at Maya’s request, I think she replaced my dog’s soul.  He was calm, gentle, submissive and most importantly HAPPY!  Ears back, smiling and tail wagging.  
+    Moral of the story, if you are willing to be trained, Maya is your trainer.  Maya is passionate about her work and understands human and dog psychology.
+    `,
+    image: arev,
+    alt: '',
+  },
 ];
 
 const Reviews = () => {
@@ -50,6 +64,7 @@ const Reviews = () => {
   const [modalTwo, setModalTwo] = useState(false);
   const [modalThree, setModalThree] = useState(false);
   const [modalFour, setModalFour] = useState(false);
+  const [modalFive, setModalFive] = useState(false);
 
   return (
     <Container maxWidth='md'>
@@ -57,8 +72,8 @@ const Reviews = () => {
 
       <Carousel autoPlay={false} showArrows={true} dynamicHeight={true}>
 
-        <div key={items[0].key}>
-          <img src={items[0].image} alt={items[0].alt} />
+        <div>
+          <img className={classes.image} src={items[0].image} alt={items[0].alt} />
           <Typography onClick={() => setModalOne(true)} className='legend' variant='body1'>{items[0].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalOne(false)} isOpen={modalOne}>
             <CancelIcon
@@ -72,7 +87,7 @@ const Reviews = () => {
         </div>
 
         <div key={items[1].key}>
-          <img src={items[1].image} alt={items[1].key} />
+          <img className={classes.image} src={items[1].image} alt={items[1].key} />
           <Typography onClick={() => setModalTwo(true)} className='legend' variant='body1'>{items[1].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalTwo(false)} isOpen={modalTwo}>
             <CancelIcon
@@ -86,7 +101,7 @@ const Reviews = () => {
         </div>
 
         <div key={items[2].key}>
-          <img src={items[2].image} alt={items[2].alt} />
+          <img className={classes.image} src={items[2].image} alt={items[2].alt} />
           <Typography onClick={() => setModalThree(true)} className='legend' variant='body1'>{items[2].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalThree(false)} isOpen={modalThree}>
             <CancelIcon
@@ -100,7 +115,7 @@ const Reviews = () => {
         </div>
 
         <div key={items[3].key}>
-          <img src={items[3].image} alt={items[3].alt} />
+          <img className={classes.image} src={items[3].image} alt={items[3].alt} />
           <Typography onClick={() => setModalFour(true)} className='legend' variant='body1'>{items[3].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalFour(false)} isOpen={modalFour}>
             <CancelIcon
@@ -110,6 +125,20 @@ const Reviews = () => {
               onClick={() => setModalFour(false)}
             />
             <Typography className={classes.modalText} variant='body2'>{items[3].text}</Typography>
+          </ReactModal>
+        </div>
+
+        <div key={items[4].key}>
+          <img className={classes.image} src={items[4].image} alt={items[4].alt} />
+          <Typography onClick={() => setModalFive(true)} className='legend' variant='body1'>{items[4].preview}</Typography>
+          <ReactModal className={classes.modalContent} onClick={() => setModalFive(false)} isOpen={modalFive}>
+            <CancelIcon
+              className={classes.dismissButton}
+              role='button'
+              onKeyPress={() => setModalFive(false)}
+              onClick={() => setModalFive(false)}
+            />
+            <Typography className={classes.modalText} variant='body2'>{items[4].text}</Typography>
           </ReactModal>
         </div>
 
@@ -124,6 +153,10 @@ const useStyles = makeStyles(() => ({
   dismissButton: {
     float: 'right',
     padding: 5,
+  },
+  image: {
+    maxHeight: 800,
+    maxWidth: 600,
   },
   modalContent: {
     position: 'absolute',
@@ -146,9 +179,5 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
     // maxWidth: 1000,
     marginBottom: 10,
-  },
-  appBar: {
-    width: '100%',
-    height: 50,
   },
 }));
