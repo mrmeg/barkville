@@ -129,7 +129,7 @@ const Reviews = () => {
         </div>
 
         <div key={items[4].key}>
-          <img className={classes.image} src={items[4].image} alt={items[4].alt} />
+          <img className={classes.horizontalImage} src={items[4].image} alt={items[4].alt} />
           <Typography onClick={() => setModalFive(true)} className='legend' variant='body1'>{items[4].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalFive(false)} isOpen={modalFive}>
             <CancelIcon
@@ -157,6 +157,10 @@ const useStyles = makeStyles(() => ({
   image: {
     maxHeight: 800,
     maxWidth: 600,
+  },
+  horizontalImage: {
+    maxWidth: 800,
+    maxHeight: 800,
   },
   modalContent: {
     position: 'absolute',
