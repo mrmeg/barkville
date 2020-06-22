@@ -156,8 +156,8 @@ const useStyles = makeStyles(() => ({
     padding: 5,
   },
   image: {
-    maxHeight: 600,
-    maxWidth: 450,
+    maxHeight: 475,
+    maxWidth: 356,
   },
   horizontalImage: {
     maxHeight: 450,
