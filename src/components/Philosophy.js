@@ -52,7 +52,7 @@ const Philosophy = () => {
             aria-controls='panel1a-content'
             id='panel1a-header'
           >
-            <Typography variant='body1'>{item.heading}</Typography>
+            <Typography style={{fontWeight: 'bold'}} variant='body1'>{item.heading}</Typography>
           </ExpansionPanelSummary>
           <div style={{margin: '1rem'}}>
             <Typography variant='body2'>{item.text}</Typography>

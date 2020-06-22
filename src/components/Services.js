@@ -95,7 +95,7 @@ const Services = () => {
             aria-controls='panel1a-content'
             id='panel1a-header'
           >
-            <Typography className={classes.heading} variant='body1'>{item.title}</Typography>
+            <Typography style={{fontWeight: 'bold'}} variant='body1'>{item.title}</Typography>
           </ExpansionPanelSummary>
           <div className={matches ? classes.panelDetailsColumn : classes.panelDetails}>
             <img className={classes.panelImage} src={item.image} alt={item.alt} />
