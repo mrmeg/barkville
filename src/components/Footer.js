@@ -1,5 +1,6 @@
 import React from 'react';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Typography from '@material-ui/core/Typography';
 
 const Footer = () => {
@@ -9,7 +10,9 @@ const Footer = () => {
   return (
     <div className={classes.bottomBar}>
       <div />
-      <Typography className={classes.copyright} variant='subtitle2'>&#169; 2020 - Matt Megenhardt </Typography>
+      <Typography className={classes.copyright} variant='subtitle1'>
+        &#169; 2020 - Made with <FavoriteIcon className={classes.icon} /> by Matt Megenhardt
+      </Typography>
     </div>
   );
 };
@@ -29,5 +32,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   copyright: {
     fontFamily: 'typeface-overpass',
+  },
+  icon: {
+    height: '.75rem',
+    width: 'auto',
   },
 }));
