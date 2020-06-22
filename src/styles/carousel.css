@@ -1,0 +1,5 @@
+/* Overrides for react-responsive-carousel used in Reviews.js */
+
+.carousel .slide{
+  background: none;
+}

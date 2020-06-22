@@ -12,7 +12,8 @@ import molly from '../images/molly-min.jpg';
 import tide from '../images/tide-min.jpg';
 import gypsy from '../images/gypsy-min.jpg';
 import arev from '../images/arev.jpg';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'react-responsive-carousel/lib/styles/carousel.css';
+import '../styles/carousel.css';
 
 const items = [
   {
@@ -67,10 +68,10 @@ const Reviews = () => {
   const [modalFive, setModalFive] = useState(false);
 
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='sm'>
       <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Barkville Dogs</Typography>
 
-      <Carousel autoPlay={false} showArrows={true} dynamicHeight={true}>
+      <Carousel autoPlay={false} showArrows={false} dynamicHeight={true}>
 
         <div>
           <img className={classes.image} src={items[0].image} alt={items[0].alt} />
@@ -128,7 +129,7 @@ const Reviews = () => {
           </ReactModal>
         </div>
 
-        <div key={items[4].key}>
+        <div className={classes.test} key={items[4].key}>
           <img className={classes.horizontalImage} src={items[4].image} alt={items[4].alt} />
           <Typography onClick={() => setModalFive(true)} className='legend' variant='body1'>{items[4].preview}</Typography>
           <ReactModal className={classes.modalContent} onClick={() => setModalFive(false)} isOpen={modalFive}>
@@ -155,12 +156,12 @@ const useStyles = makeStyles(() => ({
     padding: 5,
   },
   image: {
-    maxHeight: 800,
-    maxWidth: 600,
+    maxHeight: 600,
+    maxWidth: 450,
   },
   horizontalImage: {
-    maxWidth: 800,
-    maxHeight: 800,
+    maxHeight: 450,
+    maxWidth: 600,
   },
   modalContent: {
     position: 'absolute',
@@ -183,5 +184,8 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
     // maxWidth: 1000,
     marginBottom: 10,
+  },
+  test: {
+    maxHeight: 200,
   },
 }));
