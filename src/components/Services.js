@@ -55,7 +55,7 @@ const Services = () => {
   );
   const data = useStaticQuery(graphql`
     query {
-      enrichment: file(relativePath: { eq: "enrichment-min.jpg" }) {
+      enrichment: file(relativePath: { eq: "enrichment.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 417) {
             ...GatsbyImageSharpFluid

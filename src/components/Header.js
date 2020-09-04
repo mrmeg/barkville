@@ -27,7 +27,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "logo_pet_services-min.png" }) {
+      logo: file(relativePath: { eq: "logo_pet_services.png" }) {
         childImageSharp {
           fixed(height: 150, width: 150) {
             ...GatsbyImageSharpFixed

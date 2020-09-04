@@ -42,7 +42,6 @@ const Philosophy = () => {
 
   return (
     <Container className={classes.container} maxWidth='md'>
-      {/* {console.log(theme.palette.primary.main)} */}
       <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Our Philosophy</Typography>
 
       <Typography className={classes.centered} variant='body1'>

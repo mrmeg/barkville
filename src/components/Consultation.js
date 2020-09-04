@@ -17,6 +17,8 @@ const Consultation = () => {
   const [message, setMessage] = useState(null);
 
   const handleSubmit = async () => {
+    setMessage('Sending...');
+
     const data = {
       firstName,
       lastName,
@@ -33,7 +35,6 @@ const Consultation = () => {
       const res = await axios.post(url, {...data});
       setMessage(res.data);
     } catch (error) {
-      console.log(error);
       setMessage('Message was unable to be delivered. Sorry!');
     }
   };
