@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -10,29 +10,35 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const panelDetails = [
   {
     key: 1,
-    heading: 'Detachment',
-    text: 'Detachment is dropping the narrative that you consciously or unconsciously carry in association with your dog. My biggest story I created for my own dog, Lukey, was that because he was attacked his reactivity and aggression towards other dogs was justifiable and unfixable. The key words I used were “couldn’t” or “can’t”. Lukey “couldn’t be rehabilitated” or he “can’t control his emotional response” which then caused me to avoid or distract Lukey which was not the answer or way to deal with Lukey’s dog aggression or reactivity. That is why it’s vital that we remember that those narratives don’t serve our dogs. Feeling sorry for Lukey is not what helped him, but offering structured leadership did.',
+    heading: 'Leadership',
+    // eslint-disable-next-line quotes
+    text: [`Have you ever noticed your dog loves leading you to pee on every tree, to greet every dog or will even fight to lead you back to your home? These small behaviors can be indications that you might be lacking leadership in your relationship with your dog. This is why when we teach leadership — we focus on teaching you to the dog psychology that coincides with being your dog's leader, provider and protector in all areas of their life. In almost all trainings we assess the walk, feeding time, social situations with dogs, humans, city stimuli and even affection toward your dog so that we can support you in nurturing and guiding positive behaviors in your dog’s life.`],
   },
   {
     key: 2,
-    heading: 'Leadership',
-    text: 'Dogs, by nature, are pack animals and are happiest knowing they have a leader, a provider, and protector. When we don’t offer that to our dogs, they will gladly assume the role for us becoming the leader, provider (although they never pay rent), and protector. They will gladly lead you on your walk, tell you which dogs or humans are good and bad, and will even chase away scooters when posed as a threat etc. This is why, when we teach leadership, we teach it in all areas of your dog’s life. We focus on the walk, feeding time, social situations with dogs, humans, scooters and even affection towards your dog so that you can begin to nurture and guide the right and positive behaviors in your dogs!',
+    heading: 'Socialization',
+    text: ['Does your dog get overexcited, have negative reactions, or stop mid-walk to say hi to another dog? Some of you might say, “yes they do this, but they’re always friendly.” Whether that be the case or not, this sect of training focuses on the ability to teach your dog to coexist and respect other dogs regardless of their breed, temperament, or age. Just like you might be a friendly person, it doesn’t mean you will get along with everyone single person you come in contact with. Nevertheless, you still need to be respectful of others different from you and your dog does too.'],
   },
   {
     key: 3,
-    heading: 'Exercise',
-    text: 'Every dog needs a physical outlet. It’s not a debate, physical activity is part of every dog’s genetic code just like a person must drink enough water to stay healthy and hydrated . Regardless of breed, size or age, every dog needs exercise on some level; by not fulfilling that need we are not creating that bridge path that leads to leadership or partnership between us and our dogs. Lack of exercise is the biggest root that leads to separation anxiety, leash aggression, low confidence etc.',
+    heading: 'Diet & Exercise',
+    text: ['Movies, books, and the internet all contribute to a culture where the focal point is just all about burning your dog’s physical energy so that they are “happy.” However, science, studies, and experience have taught us that exercise is not the only way for dogs to be happy. Just like weight-loss programs, they are most effective when you eat a good diet AND you exercise to fit what your body can physically handle. No one goes to the gym on day one and begins lifting heavy weights with no problem and without potentially injuring themselves. This is true for dogs too, especially puppies! Through our training, we will demonstrate different exercise routines you can practice while also assessing your dog’s diet to keep your dogs fit without overdoing it or creating potentially long-term issues to your dog’s health.'],
   },
   {
     key: 4,
     heading: 'Mental Engagement',
-    text: 'The best way to think of enrichment and dog wellness is to think about a child’s school day. Everyday, your kid goes to school to learn how to stay in a single file line, how to write their ABC’s, how to play, share toys, follow societal rules like raising your hand in class and socialize with people different from us. Well believe it or not, our dogs need structure like that too. Sometimes our dogs need coaching in those exact issues too, right? Like learning how to walk without lunging, learning to socialize with respect, offering mental challenges that lead to positive outcomes, learning to follow our rules and how to disagree with our dog’s rules. Mental enrichment, rules, guidance, and lessons are what contribute balance to our dogs and is crucial to dogs that are exhibiting behavioral reactivity.',
+    text: [
+      'The best way to think of enrichment is to think about a young child’s school day. Everyday, kids in school learn how to stay in a single file line, how to write their ABC’s, how to play, share toys, follow societal rules like raising your hand in class and socialize with people different from us. If school were just recess, then it wouldn’t be school. Well, believe it or not, our dogs need mental structure like that and not just recess (dog parks, daycare, on leash play sessions etc.). Dogs, especially working breeds, need to be mentally stimulated so that they can fulfill their natural-born purpose in life that stems from their breed origin',
+      <br />,
+      <br />,
+      'I know that there were LOTS of people who felt lost when quarantine hit — people would dive into puzzles, read, listen to podcasts, learn instruments, etc. As animals, we all like doing things that stimulate our brains especially when we are feeling deprived. That is why offering those true dog activities to our pets allow us to deepen our relationships with them and offer the ultimate source of balance in their lives.',
+    ],
   },
 ];
 
 const Philosophy = () => {
   const classes = useStyles();
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <Container className={classes.container} maxWidth='md'>
@@ -40,7 +46,7 @@ const Philosophy = () => {
       <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Our Philosophy</Typography>
 
       <Typography className={classes.centered} variant='body1'>
-        Barkville prides itself on being a fully immersive training company that offers support in every area of our dog’s lives. Through education and experienced based training, we want to educate owners in understanding how they can be the source to offering a balanced life full of love and partnership with their dogs. Think of every dog as a cup, and the water represents the areas of life that need to be fulfilled by owners everyday to achieve happiness and balance in our dog’s life. From years and years of studying k9 behavior, here are the four ‘water’ components that lead to a happy doggy dog fun-filled life. Dogs are most fulfilled when our humans offer Detachment, Leadership, Physical Exercise and Mental Enrichment.
+        Barkville prides itself on being a fully immersive training company that offers support in every area of our dog’s lives. Through education and experienced-based training, we want to educate owners in understanding how they can be the source of a balanced life full of love and partnership with their dogs. To support our dog’s health, we focus on four qualities: Leadership, Socialization, Physical Exercise, and Mental Enrichment.
       </Typography>
 
       <div style={{margin: '.5rem'}} />

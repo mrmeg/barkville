@@ -71,7 +71,7 @@ const Reviews = () => {
     <Container maxWidth='sm'>
       <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Barkville Dogs</Typography>
 
-      <Carousel autoPlay={false} showArrows={false} dynamicHeight={true}>
+      <Carousel autoPlay={true} showArrows={false} dynamicHeight={true}>
 
         <div>
           <img className={classes.image} src={items[0].image} alt={items[0].alt} />

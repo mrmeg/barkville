@@ -21,6 +21,8 @@ const useStyles = makeStyles(() => ({
     margin: '0 auto',
     padding: 0,
   },
+  image: {
+  },
 }));
 
 const Image = () => {
@@ -28,7 +30,7 @@ const Image = () => {
     query {
       bannerImage: file(relativePath: { eq: "banner.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1280, maxHeight: 860) {
+          fluid(maxWidth: 1280, maxHeight: 800) {
             ...GatsbyImageSharpFluid
           }
         }

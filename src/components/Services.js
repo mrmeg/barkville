@@ -10,35 +10,37 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
-import DogWalking from '../images/dog_walking-min.jpg';
-import DogTraining from '../images/dog_training-min.jpg';
-import Staycation from '../images/staycation.jpg';
+import DogWalking from '../images/dog-walking.jpg';
+import DogTraining from '../images/dog-training.jpg';
+import Boarding from '../images/boarding.jpg';
 
 const panelDetails = [
   {
     key: 1,
-    image: DogWalking,
-    title: 'UES Dog Walking',
-    description: 'Think of a dog’s walk with Barkville like an hour of camp! We offer an hour of a structured group walk to the park, followed by a water break, mixed with some supervised and structured engagement so dogs can bond with respectful boundaries.',
+    image: DogTraining,
+    title: 'Dog Training',
+    text: [
+      'While it’s called “dog training,” a dog’s training is only as good as its handler. This is why when we do our training, we focus more on educating the owner to fill the gap in understanding their dog’s motives and behaviors. Using a well-balanced and education-based training approach, we teach early puppy training and behavior modification for all dogs of all ages and breeds. These trainings are 1-1 sessions that range from 60-75 minutes and are followed with a training document that covers everything covered in our training.',
+      <br />,
+      <br />,
+      '*We also do Family Training (Adults and kids)*',
+    ],
     price: 'Solo walks: $25/30 minutes | $40/hour',
-    alt: 'Three dogs sitting obediently on the sidewalk',
+    alt: 'A small dog wearing training vest sitting',
   },
   {
     key: 2,
-    image: DogTraining,
-    title: 'Dog Training',
-    description: 'We specialize in behavior modification for all dogs and owners in need using a well balanced and education based training approach. All the tools we use come with a strict education based training approach.',
-    description2: 'First session begins with a consultation, behavior assessment, followed by a training regiment. Our dog walking, off leash services, and agility program, are all follow up programs that solidify our training regiment and philosophy.',
-    description3: '',
+    image: DogWalking,
+    title: 'UES Dog Walking - Socialization Walks',
+    text: 'These are group walks designed for dogs to practice safe socialization greetings and approaches with trainers and balanced dogs present. These walks are best for dogs that need support with leash manners and for dogs that have already done a 1-1 training session, although it’s not vital. If your dog is five months or younger, this is not recommended unless it has already been discussed with a trainer.',
     price: '',
-    alt: 'A small dog with a training vest sitting',
+    alt: 'A group of dogs sitting politely on a sidewalk',
   },
   {
     key: 3,
-    image: Staycation,
-    title: 'Staycations',
-    description: 'This service is best for when you are going away and for dogs that thrive best in an environment they’re already familiar with! This overnight is done with only trainers who provide around the clock care.',
-    description2: 'Overnight care also comes with excursions to different places in the city and time with other well balanced dogs. For an additional charge, we also offer a  weight loss/ training program for dogs that need more structure or who may need to lose some weight.',
+    image: Boarding,
+    title: 'Boarding & Overnights',
+    text: 'Give your dog the ultimate getaway experience with a trainer who will prioritize your dog’s behavioral and physical needs and will even create small excursions for your dog! Your dog will have the choice to stay in our home or we can go to yours. We accept dogs that are in training and puppies of all ages. If you have a dog that has not stayed with us or trained with us before, please contact us to see what option of care is best for you!',
     price: '',
     alt: 'Trainer walking a Beagle and Great Dane',
   },
@@ -78,11 +80,12 @@ const Services = () => {
         fluid={data.enrichment.childImageSharp.fluid}
       />
 
-      <Typography variant='body1'>At Barkville, we strive to help dogs grow to be their best selves while empowering owners and supporting them through every milestone in their dog&apos;s life. Through our education based enrichment programs, we work to support good canine citizens and nurture connectivity between dogs and their owners so they can grow to accomplish extraordinary things. Over the years of dog handling, our motto and our beliefs stand in the realm of every dog has potential to be better no matter the size, age, breed or temperment, we are here for you! Some of our specialties include:</Typography>
+      <Typography variant='body1'>At Barkville, we strive to help dogs grow to be their best selves while empowering owners and supporting them through every milestone in their dog's life. Through our education-based enrichment programs, we work to support good canine citizens and nurture connectivity between dogs and their owners so they can grow together to accomplish extraordinary things. Over years of dog care, we believe every dog has potential to be better no matter the size, age, breed or temperament. Some of our specialties include:</Typography>
 
       <div className={classes.listText}>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Leash/Dog Reactivity</Typography>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Socialization</Typography>
+        <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Separation Anxiety</Typography>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Puppy Obedience Training</Typography>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Off-Leash Training</Typography>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} XXL Dog Care/Training</Typography>
@@ -99,9 +102,7 @@ const Services = () => {
           </ExpansionPanelSummary>
           <div className={matches ? classes.panelDetailsColumn : classes.panelDetails}>
             <img className={classes.panelImage} src={item.image} alt={item.alt} />
-            <Typography variant='body2'>{item.description}</Typography>
-            {item.description2 !== '' ? <Typography style={{paddingTop: '.75rem'}} variant='body2'>{item.description2}</Typography> : null}
-            {item.description3 !== '' ? <Typography style={{paddingTop: '.75rem'}} variant='body2'>{item.description3}</Typography> : null}
+            <Typography variant='body2'>{item.text}</Typography>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               {/* <Typography className={classes.priceText}>{item.price}</Typography> */}
             </div>
