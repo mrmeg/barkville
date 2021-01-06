@@ -18,30 +18,61 @@ const panelDetails = [
   {
     key: 1,
     image: DogTraining,
-    title: 'Dog Training',
+    title: 'Online Training',
     text: [
-      'While it’s called “dog training,” a dog’s training is only as good as its handler. This is why when we do our training, we focus more on educating the owner to fill the gap in understanding their dog’s motives and behaviors. Using a well-balanced and education-based training approach, we teach early puppy training and behavior modification for all dogs of all ages and breeds. These trainings are 1-1 sessions that range from 60-75 minutes and are followed with a training document that covers everything covered in our training.',
+      'Great for accessing information anywhere you go! This is best for anyone who’s looking for ways they can improve their relationship with their dog while also receiving the best information possible of how to be set up for success. ',
       <br />,
       <br />,
-      '*We also do Family Training (Adults and kids)*',
     ],
-    price: 'Solo walks: $25/30 minutes | $40/hour',
+    price: ['Price: $2/minute'],
     alt: 'A small dog wearing training vest sitting',
   },
   {
     key: 2,
     image: DogWalking,
-    title: 'UES Dog Walking - Socialization Walks',
-    text: 'These are group walks designed for dogs to practice safe socialization greetings and approaches with trainers and balanced dogs present. These walks are best for dogs that need support with leash manners and for dogs that have already done a 1-1 training session, although it’s not vital. If your dog is five months or younger, this is not recommended unless it has already been discussed with a trainer.',
-    price: '',
+    title: 'Puppy Obedience Training',
+    text: [
+      'This is a strict 10 session course teaching you how to hold your puppy accountable to a higher standard in NYC. While we want puppies to have fun and a great puppyhood, part of that is also teaching novice puppy owners the importance of learning how to keep them safe in situations which, you as an owner, or new pet parent, might not even realize could be dangerous. We see the best results when owners learn and understand the true dog mentality. That is why it’s so important that we teach you healthy strategies to navigate, making friends, apartment manners & etiquette, NYC street walking, followed by emergency safety protocols.',
+      <br />,
+      'We also do Family Training (Adults and kids)',
+      <br />,
+      'Can be purchased as individual sessions or as a bulk package',
+
+    ],
+    price: [
+      'Individual: $150/90 minutes or $100/70 minutes',
+      <br />,
+      'Package: $1400 - Ten 90-minute sessions',
+      <br />,
+      'Package: $900 - Ten 70-minute sessions',
+      <br />,
+    ],
     alt: 'A group of dogs sitting politely on a sidewalk',
   },
   {
     key: 3,
     image: Boarding,
-    title: 'Boarding & Overnights',
-    text: 'Give your dog the ultimate getaway experience with a trainer who will prioritize your dog’s behavioral and physical needs and will even create small excursions for your dog! Your dog will have the choice to stay in our home or we can go to yours. We accept dogs that are in training and puppies of all ages. If you have a dog that has not stayed with us or trained with us before, please contact us to see what option of care is best for you!',
-    price: '',
+    title: 'Behavior Modification',
+    text: [
+      'Can be purchased as individual sessions or as a bulk package',
+      <br />,
+      '*Customized Training Plan with Goals',
+      <br />,
+      '*24/7 care and training',
+      <br />,
+      '*Excursions to different parts of the city and upstate excursions',
+      <br />,
+      '*2 in-person sessions a week (included in B&T program)*',
+      <br />,
+      'Bonded & Insured (TBD)',
+    ],
+    price: [
+      'Individual: $200/90 minutes',
+      <br />,
+      'Package: $1900 - Ten 90-minute sessions',
+      <br />,
+      'Board N’ Train: $150/day for 4 or 6 weeks',
+    ],
     alt: 'Trainer walking a Beagle and Great Dane',
   },
 ];
@@ -67,7 +98,7 @@ const Services = () => {
 
   return (
     <Container className={classes.container} maxWidth='md'>
-      <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Enrichment Programs</Typography>
+      <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo'}} variant='h3'>Training Services</Typography>
 
       <Img
         style={{
@@ -81,6 +112,10 @@ const Services = () => {
       />
 
       <Typography variant='body1'>At Barkville, we strive to help dogs grow to be their best selves while empowering owners and supporting them through every milestone in their dog's life. Through our education-based enrichment programs, we work to support good canine citizens and nurture connectivity between dogs and their owners so they can grow together to accomplish extraordinary things. Over years of dog care, we believe every dog has potential to be better no matter the size, age, breed or temperament. Some of our specialties include:</Typography>
+
+      <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo', fontWeight: 600, marginTop: 25, marginBottom: 15}} variant='h5'>Setting you up for success</Typography>
+
+      <Typography variant='body1'>At Barkville, we have seen a range of what behavior modification can look like in NYC and we know what’s on the line when it comes to safety and liability. Our greatest success stories are often attached to owners who really understand the “why” and “how”  in relation to their dog’s behavior and overall situation.</Typography>
 
       <div className={classes.listText}>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Leash/Dog Reactivity</Typography>
@@ -104,7 +139,7 @@ const Services = () => {
             <img className={classes.panelImage} src={item.image} alt={item.alt} />
             <Typography variant='body2'>{item.text}</Typography>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              {/* <Typography className={classes.priceText}>{item.price}</Typography> */}
+              <Typography className={classes.priceText}>{item.price}</Typography>
             </div>
           </div>
         </ExpansionPanel>
