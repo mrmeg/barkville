@@ -10,14 +10,15 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
+
+import OnlineTraining from '../images/onlineTraining.jpg';
 import DogWalking from '../images/dog-walking.jpg';
-import DogTraining from '../images/dog-training.jpg';
 import Boarding from '../images/boarding.jpg';
 
 const panelDetails = [
   {
     key: 1,
-    image: DogTraining,
+    image: OnlineTraining,
     title: 'Online Training',
     text: [
       'Great for accessing information anywhere you go! This is best for anyone who’s looking for ways they can improve their relationship with their dog while also receiving the best information possible of how to be set up for success. ',
@@ -111,11 +112,11 @@ const Services = () => {
         fluid={data.enrichment.childImageSharp.fluid}
       />
 
-      <Typography variant='body1'>At Barkville, we strive to help dogs grow to be their best selves while empowering owners and supporting them through every milestone in their dog's life. Through our education-based enrichment programs, we work to support good canine citizens and nurture connectivity between dogs and their owners so they can grow together to accomplish extraordinary things. Over years of dog care, we believe every dog has potential to be better no matter the size, age, breed or temperament. Some of our specialties include:</Typography>
-
       <Typography style={{textAlign: 'center', fontFamily: 'typeface-chivo', fontWeight: 600, marginTop: 25, marginBottom: 15}} variant='h5'>Setting you up for success</Typography>
 
       <Typography variant='body1'>At Barkville, we have seen a range of what behavior modification can look like in NYC and we know what’s on the line when it comes to safety and liability. Our greatest success stories are often attached to owners who really understand the “why” and “how”  in relation to their dog’s behavior and overall situation.</Typography>
+
+      <Typography variant='body1'>We strive to help dogs grow to be their best selves while empowering owners and supporting them through every milestone in their dog's life. Through our education-based enrichment programs, we work to support good canine citizens and nurture connectivity between dogs and their owners so they can grow together to accomplish extraordinary things. Over years of dog care, we believe every dog has potential to be better no matter the size, age, breed or temperament. Some of our specialties include:</Typography>
 
       <div className={classes.listText}>
         <Typography className={classes.listItem} variant='body1'>{'\u25cf'} Leash/Dog Reactivity</Typography>
