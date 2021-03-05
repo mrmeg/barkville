@@ -4,8 +4,8 @@ import {makeStyles} from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import json2mq from 'json2mq';
 import Container from '@material-ui/core/Container';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {useStaticQuery, graphql} from 'gatsby';
@@ -17,7 +17,7 @@ import Boarding from '../images/boarding.jpg';
 
 const panelDetails = [
   {
-    key: 1,
+    key: 0,
     image: DogTraining,
     title: 'Dog Training',
     text: [
@@ -30,7 +30,7 @@ const panelDetails = [
     alt: 'A small dog wearing training vest sitting',
   },
   {
-    key: 2,
+    key: 1,
     image: DogWalking,
     title: 'UES Dog Walking - Socialization Walks',
     text: 'These are group walks designed for dogs to practice safe socialization greetings and approaches with trainers and balanced dogs present. These walks are best for dogs that need support with leash manners and for dogs that have already done a 1-1 training session, although it’s not vital. If your dog is five months or younger, this is not recommended unless it has already been discussed with a trainer.',
@@ -38,7 +38,7 @@ const panelDetails = [
     alt: 'A group of dogs sitting politely on a sidewalk',
   },
   {
-    key: 3,
+    key: 2,
     image: Boarding,
     title: 'Boarding & Overnights',
     text: 'Give your dog the ultimate getaway experience with a trainer who will prioritize your dog’s behavioral and physical needs and will even create small excursions for your dog! Your dog will have the choice to stay in our home or we can go to yours. We accept dogs that are in training and puppies of all ages. If you have a dog that has not stayed with us or trained with us before, please contact us to see what option of care is best for you!',
@@ -93,14 +93,14 @@ const Services = () => {
       </div>
 
       {panelDetails.map((item) => (
-        <ExpansionPanel key={item.key}>
-          <ExpansionPanelSummary
+        <Accordion key={item.key}>
+          <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls='panel1a-content'
             id='panel1a-header'
           >
             <Typography style={{fontWeight: 'bold'}} variant='body1'>{item.title}</Typography>
-          </ExpansionPanelSummary>
+          </AccordionSummary>
           <div className={matches ? classes.panelDetailsColumn : classes.panelDetails}>
             <img className={classes.panelImage} src={item.image} alt={item.alt} />
             <Typography variant='body2'>{item.text}</Typography>
@@ -108,7 +108,7 @@ const Services = () => {
               {/* <Typography className={classes.priceText}>{item.price}</Typography> */}
             </div>
           </div>
-        </ExpansionPanel>
+        </Accordion>
       ))}
     </Container>
   );
